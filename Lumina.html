@@ -122,7 +122,6 @@
             border: 1px solid var(--glass-border); 
             box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
             aspect-ratio: 9 / 16; /* Enforces correct vertical video dimensions */
-            object-fit: cover;
             background: #000;
         }
         
@@ -257,15 +256,22 @@
             <img src="assets/Lumina/Mock up.png" alt="Mockup" class="diagram-img">
         </section>
         
+        <!-- YOUTUBE EMBED BLOCK -->
         <section class="video-gallery">
             <div class="video-item">
                 <h3 class="video-title">Lumina ad</h3>
-                <video controls loop playsinline class="diagram-vid">
-                    <source src="assets/Lumina 2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe 
+                    class="diagram-vid" 
+                    src="https://www.youtube.com/embed/wugpZy32fL0?loop=1&playlist=wugpZy32fL0" 
+                    title="Lumina ad" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
-        </section> <section id="contact">
+        </section> 
+
+        <section id="contact">
             <h2>Get in Touch!!</h2>
             <div class="glass-card" style="max-width: 600px; margin: 0 auto 80px; text-align: center;">
                 <form id="my-form" action="https://formspree.io/f/mykgaqdk" method="POST">
