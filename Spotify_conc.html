@@ -124,7 +124,44 @@
             aspect-ratio: 9 / 16; /* Enforces correct vertical video dimensions */
             background: #000;
         }
-        
+
+        /* INFINITE LOOPING IMAGE CAROUSEL */
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            margin: 40px auto 60px;
+            padding: 10px 0;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            width: calc((280px * 6) + (20px * 6));
+            animation: scrollMarquee 25s linear infinite;
+        }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+        .carousel-slide {
+            width: 280px;
+            flex-shrink: 0;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .carousel-slide img:hover {
+            transform: scale(1.02);
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-280px * 3 - 20px * 3)); }
+        }
         /* KEY PRIORITIES - FIXED ALIGNMENT */
         .priority-list { list-style: none; padding: 0; display: flex; flex-direction: column; align-items: center; width: 100%; }
         .priority-item { 
@@ -197,6 +234,15 @@
             .priority-icon { width: 50px; height: 50px; }
             .nav-glass { padding: 12px 25px; gap: 20px; font-size: 0.65rem; }
             .video-item { max-width: 290px; }
+            .carousel-track {
+                width: calc((200px * 6) + (15px * 6));
+                gap: 15px;
+            }
+            .carousel-slide { width: 200px; }
+            @keyframes scrollMarquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-200px * 3 - 15px * 3)); }
+            }
         }
     </style>
 </head>
@@ -259,6 +305,17 @@
                 </iframe>
             </div>
         </section> 
+
+        <section class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide"><img src="assets/Spotify/photo1.png" alt="Spotify Concept Slide 1"></div>
+                <div class="carousel-slide"><img src="assets/Spotify/photo2.png" alt="Spotify Concept Slide 2"></div>
+                <div class="carousel-slide"><img src="assets/Spotify/photo3.png" alt="Spotify Concept Slide 3"></div>
+                <div class="carousel-slide"><img src="assets/Spotify/photo1.png" alt="Spotify Concept Slide 1 Duplicate"></div>
+                <div class="carousel-slide"><img src="assets/Spotify/photo2.png" alt="Spotify Concept Slide 2 Duplicate"></div>
+                <div class="carousel-slide"><img src="assets/Spotify/photo3.png" alt="Spotify Concept Slide 3 Duplicate"></div>
+            </div>
+        </section>
 
         <section id="contact">
             <h2>Get in Touch!!</h2>
