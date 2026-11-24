@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="assets/Logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study - Mobile Banking</title>
+    <title>Tini Express display ad</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -53,7 +53,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('assets/Onboarding/mockedup.png') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/TiniExpress/poster.jpg') no-repeat center 20%;
             background-size: cover;
             position: relative;
             margin-bottom: 60px;
@@ -94,11 +94,42 @@
         .glass-card { background: var(--glass-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px; margin: 40px 0; text-align: left; }
         .diagram-img { width: 100%; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.3); margin: 40px 0; }
 
+        /* CENTERED VERTICAL VIDEO GALLERY */
+        .video-gallery {
+            display: flex;
+            justify-content: center;
+            margin: 40px auto 60px;
+            width: 100%;
+        }
+        .video-item {
+            max-width: 360px; /* Perfect for portrait / vertical smartphone framing */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+            opacity: 0.95;
+        }
+        .diagram-vid { 
+            width: 100%; 
+            border-radius: 12px; 
+            border: 1px solid var(--glass-border); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+            aspect-ratio: 9 / 16; /* Enforces correct vertical video dimensions */
+            background: #000;
+        }
+        
         /* KEY PRIORITIES - FIXED ALIGNMENT */
         .priority-list { list-style: none; padding: 0; display: flex; flex-direction: column; align-items: center; width: 100%; }
         .priority-item { 
             display: flex; 
-            align-items: center; /* Vertically centers icon with text */
+            align-items: center; 
             gap: 30px; 
             margin-bottom: 30px; 
             font-family: 'Open Sans', sans-serif; 
@@ -109,7 +140,7 @@
         .priority-icon { 
             width: 65px; 
             height: 65px; 
-            flex-shrink: 0; /* Prevents icon from distorting */
+            flex-shrink: 0; 
             object-fit: contain;
         }
         .priority-item span { line-height: 1.5; font-size: 1rem; opacity: 0.9; }
@@ -165,6 +196,7 @@
             .priority-item { gap: 20px; }
             .priority-icon { width: 50px; height: 50px; }
             .nav-glass { padding: 12px 25px; gap: 20px; font-size: 0.65rem; }
+            .video-item { max-width: 290px; }
         }
     </style>
 </head>
@@ -181,69 +213,36 @@
 
     <header class="hero-case">
         <div class="hero-title-frame">
-            <h1>Mobile Banking</h1>
-            <span>onboarding flow</span>
+            <h1>Tini Express</h1>
+            <span>display ad</span>
         </div>
     </header>
 
     <div class="container">
         <section class="overview-section">
             <div class="overview-item">
-                <h4>My role</h4>
-                <p>UX/UI Designer</p>
+                <h4>Client</h4>
+                <p>Tini Express</p>
             </div>
             <div class="overview-item">
-                <h4>Duration</h4>
-                <p>3 weeks</p>
+                <h4>Format</h4>
+                <p>15s vertical motion ad<br>1080 × 1920</p>
             </div>
             <div class="overview-item">
-                <h4>Tools</h4>
-                <ul>
-                    <li>Figma</li>
-                    <li>Google forms</li>
-                    <li>Notion</li>
-                </ul>
+                <h4>Placement</h4>
+                <p>Digital display screen at the mall</p>
             </div>
         </section>
 
-        <section id="problem">
-            <h2>Problem Statement</h2>
-            <div class="glass-card">
-                <p>New users often feel confused and frustrated during the digital wallet sign-up process due to unclear terminology, a lack of trust signal and security cues, and lengthy onboarding process that require more than 2 minutes to go through.</p>
+        <section class="glass-card">
+            <p style="font-family: 'Open Sans', sans-serif; margin: 0; opacity: 0.9;">A short looping motion ad made for a digital display screen at the mall. Shoppers walking past have only a few seconds, so the ad keeps to three beats: what Tini Express is (shop Takealot, SHEIN and more from Eswatini, with delivery from E150), which stores you can shop from, and a clear call to action, a large QR code and the referral code TINI for 20% off a first delivery. The QR code stays on screen the whole time so anyone who stops can scan it straight away.</p>
+        </section>
+
+        <section class="video-gallery">
+            <div class="video-item">
+                <h3 class="video-title">Tini Express display ad</h3>
+                <video class="diagram-vid" src="assets/TiniExpress/tini-display-ad.mp4" poster="assets/TiniExpress/poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
             </div>
-        </section>
-
-        <section id="solution">
-            <h2>The Solution</h2>
-            <div class="glass-card">
-                <p>Design a clear, user-friendly mobile wallet login and onboarding experience that simplifies language, guides users step-by-step, and clearly communicates required information, ultimately improving completion rates and reducing user frustration.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Design Process</h2>
-            <img src="assets/Onboarding/design process.png" alt="Design Process" class="diagram-img">
-        </section>
-
-        <section>
-            <h2>User Personas</h2>
-            <img src="assets/Onboarding/Persona 1.png" alt="Persona" class="diagram-img">
-            <img src="assets/Onboarding/Persona 2.png" alt="Persona" class="diagram-img">
-        </section>
-
-        <section>
-            <h2>User Flow</h2>
-            <img src="assets/Onboarding/useflow.png" alt="User Flow" class="diagram-img">
-        </section>
-
-        <section>
-            <h2>Lofi Wireframes</h2>
-            <img src="assets/Onboarding/lofi.png" alt="Hi-Fi" class="diagram-img">
-        </section>
-
-        <section>
-            <h2>Final Hi-Fi Designs</h2>
-            <img src="assets/Onboarding/Hif.png" alt="Hi-Fi" class="diagram-img">
         </section>
 
         <section id="contact">
@@ -308,5 +307,4 @@
         form.addEventListener("submit", handleSubmit);
     </script>
 </body>
-
 </html>
